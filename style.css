@@ -160,6 +160,7 @@
   .bw-card-footer { display:flex; align-items:center; justify-content:space-between; }
   .bw-price { font-family:var(--font-display); font-size:1.2rem; font-weight:600; color:var(--brown-mid); }
 
+
   .bw-modal-meta { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 6px; }
   .bw-meta-chip { background:var(--cream-dark); color:var(--brown-mid); border-radius:999px; padding:6px 10px; font-size:.76rem; font-weight:500; }
   
@@ -239,6 +240,9 @@
     .bw-cta     { padding:60px 0; }
     .bw-hero-title { font-size:3rem; }
     .bw-carousel-btn { display:none!important; }
+    .bw-modal-body { grid-template-columns:1fr; padding:18px; }
+    .bw-modal-img { min-height:220px; }
+    .bw-modal-title { font-size:1.6rem; }
   }
   
   @media (max-width: 575px) {
