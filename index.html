@@ -623,13 +623,21 @@
       const imgEl = document.getElementById('modalProductImage');
       imgEl.className = 'bw-modal-img ' + (imageMap[type] || 'bw-img--latte');
       
-      document.getElementById('productModal').classList.add('active');
+      const modalEl = document.getElementById('productModal');
+      modalEl.classList.add('active');
+      modalEl.style.display = 'flex';
+      modalEl.style.visibility = 'visible';
+      modalEl.style.opacity = '1';
       setBodyScrollLock(true);
     }
 
     function closeProductModal(event) {
       if (event && event.target.id !== 'productModal') return;
-      document.getElementById('productModal').classList.remove('active');
+      const modalEl = document.getElementById('productModal');
+      modalEl.classList.remove('active');
+      modalEl.style.display = '';
+      modalEl.style.visibility = '';
+      modalEl.style.opacity = '';
       setBodyScrollLock(false);
     }
 
@@ -658,6 +666,12 @@
       const cartOpen = document.getElementById('cartSidebar').classList.contains('open');
       document.body.style.overflow = (lockModal || cartOpen) ? 'hidden' : '';
     }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && document.getElementById('productModal').classList.contains('active')) {
+        closeProductModal();
+      }
+    });
 
     // ========== FILTER TABS ==========
     document.querySelectorAll('.bw-filter-btn').forEach(btn => {
