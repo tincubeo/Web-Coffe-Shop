@@ -1,0 +1,203 @@
+/* ============================================================
+   img.css — Quản lý tất cả hình ảnh của Brewnara
+   
+   Cấu trúc thư mục khuyến nghị:
+   
+   📁 brewnara/
+   ├── index.html
+   ├── style.css
+   ├── img.css          ← file này
+   └── 📁 images/
+       ├── 📁 slides/         (ảnh nền slideshow hero)
+       │   ├── slide-latte.jpg
+       │   ├── slide-espresso.jpg
+       │   ├── slide-coldbrew.jpg
+       │   └── slide-cappuccino.jpg
+       ├── 📁 products/       (ảnh sản phẩm trong menu)
+       │   ├── latte.jpg
+       │   ├── espresso.jpg
+       │   ├── cappuccino.jpg
+       │   ├── coldbrew.jpg
+       │   ├── icedlatte.jpg
+       │   ├── matcha.jpg
+       │   ├── mocha.jpg
+       │   └── affogato.jpg
+       └── 📁 about/          (ảnh trang giới thiệu, tùy chọn)
+           └── shop.jpg
+
+   HƯỚNG DẪN THAY ẢNH:
+   - Chụp/lưu ảnh vào đúng thư mục tương ứng
+   - Đổi tên file cho khớp với tên ghi ở đây
+   - Hoặc thay đường dẫn url('...') thành tên file của bạn
+   ============================================================ */
+
+
+/* ============================================================
+   1. SLIDESHOW HERO — Ảnh nền toàn màn hình
+   ============================================================ */
+
+/* Slide 1 — Latte
+   Gợi ý: ảnh chụp tách latte nghiêng, ánh sáng tự nhiên,
+           nền gỗ hoặc đá marble trắng */
+           .bw-slide--latte {
+            background-image: url('images/slides/slide-latte.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            /* Giữ lại màu fallback nếu ảnh chưa có */
+            background-color: #F0E6D3;
+          }
+          
+          /* Slide 2 — Espresso
+             Gợi ý: ảnh shot espresso cận cảnh, nền tối, hơi khói nhẹ */
+          .bw-slide--espresso {
+            background-image: url('images/slides/slide-espresso.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #2C1A0E;
+          }
+          
+          /* Slide 3 — Cold Brew
+             Gợi ý: ảnh ly cold brew đá viên, ánh sáng sáng, nền trắng */
+          .bw-slide--cold {
+            background-image: url('images/slides/slide-coldbrew.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #D4E8F0;
+          }
+          
+          /* Slide 4 — Cappuccino
+             Gợi ý: ảnh chụp từ trên xuống (flat lay), lớp foam nghệ thuật */
+          .bw-slide--cappuccino {
+            background-image: url('images/slides/slide-cappuccino.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #3A2010;
+          }
+          
+          /* Thêm overlay tối lên ảnh slide để chữ dễ đọc hơn
+             — điều chỉnh rgba(0,0,0, X) để thay độ tối, X từ 0.0 đến 0.7 */
+          .bw-slide--latte::before,
+          .bw-slide--cold::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(250, 240, 220, 0.45);  /* overlay sáng cho slide nền sáng */
+            z-index: 0;
+            pointer-events: none;
+          }
+          
+          .bw-slide--espresso::before,
+          .bw-slide--cappuccino::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.35);  /* overlay tối cho slide nền tối */
+            z-index: 0;
+            pointer-events: none;
+          }
+          
+          /* Đảm bảo nội dung slide nằm trên overlay */
+          .bw-slide .container {
+            position: relative;
+            z-index: 1;
+          }
+          
+          
+          /* ============================================================
+             2. ẢNH SẢN PHẨM — Thẻ menu
+             ============================================================ */
+          
+          /* Classic Latte
+             Gợi ý: ảnh chụp từ trên, latte art hình lá hoặc tim */
+          .bw-img--latte {
+            background-image: url('images/products/latte.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #C8956C; /* fallback */
+          }
+          
+          /* Espresso
+             Gợi ý: ảnh shot espresso trong tách nhỏ, có crema vàng */
+          .bw-img--espresso {
+            background-image: url('images/products/espresso.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #4A2510;
+          }
+          
+          /* Cappuccino
+             Gợi ý: ảnh cappuccino foam dày, rắc bột cacao */
+          .bw-img--cappuccino {
+            background-image: url('images/products/cappuccino.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #D4A574;
+          }
+          
+          /* Cold Brew
+             Gợi ý: ảnh ly cao, đá viên trong, màu nâu đậm */
+          .bw-img--coldbrew {
+            background-image: url('images/products/coldbrew.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #2C2C4A;
+          }
+          
+          /* Iced Latte
+             Gợi ý: ảnh ly đá, có straw, ánh sáng ngược */
+          .bw-img--icedlatte {
+            background-image: url('images/products/icedlatte.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #4A8FA0;
+          }
+          
+          /* Matcha Latte
+             Gợi ý: ảnh màu xanh matcha nổi bật, foam trắng */
+          .bw-img--matcha {
+            background-image: url('images/products/matcha.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #4A8A4A;
+          }
+          
+          /* Caramel Mocha
+             Gợi ý: ảnh có caramel drizzle nâu vàng, whipped cream */
+          .bw-img--mocha {
+            background-image: url('images/products/mocha.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #3C1A05;
+          }
+          
+          /* Affogato
+             Gợi ý: ảnh kem vanilla trắng đang tan trong espresso */
+          .bw-img--affogato {
+            background-image: url('images/products/affogato.jpg');
+            background-size: cover;
+            background-position: center;
+            background-color: #C8956C;
+          }
+          
+          /* Ẩn emoji khi đã có ảnh thật
+             — Bỏ comment dòng dưới sau khi thêm ảnh xong */
+          /* .bw-img-emoji { display: none; } */
+          
+          
+          /* ============================================================
+             3. ẢNH SECTION ABOUT (tùy chọn)
+             ============================================================ */
+          
+          /* Ảnh không gian quán / barista đang pha chế */
+          .bw-about-img {
+            background-image: url('images/about/shop.jpg');
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            min-height: 400px;
+            background-color: #5C3317;
+          }
