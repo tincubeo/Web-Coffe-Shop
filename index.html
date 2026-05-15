@@ -63,7 +63,21 @@
                 </div>
               </div>
               <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
-                <img src="slidesbanner/istockphoto-1460694670-1024x1024.jpg" alt="Classic Latte" class="bw-slide-image" style="max-width: 100%; height: auto; border-radius: 10px;">
+                <div class="bw-cup-wrap">
+                  <div class="bw-cup">
+                    <div class="bw-cup-body">
+                      <div class="bw-cup-liquid" style="background:linear-gradient(180deg,#8B4513 0%,#3C1A05 100%);"></div>
+                      <div class="bw-cup-foam"></div>
+                      <div class="bw-latte-art"></div>
+                    </div>
+                    <div class="bw-cup-handle"></div>
+                    <div class="bw-cup-saucer"></div>
+                  </div>
+                  <div class="bw-float-badge">
+                    <span class="bw-badge-num">★ 4.9</span>
+                    <span class="bw-badge-sub">1,200+ đánh giá</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -83,7 +97,20 @@
                 </div>
               </div>
               <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
-                <img src="slidesbanner/istockphoto-1460694670-1024x1024.jpg" alt="Pure Espresso" class="bw-slide-image" style="max-width: 100%; height: auto; border-radius: 10px;">
+                <div class="bw-cup-wrap">
+                  <div class="bw-cup bw-cup--small">
+                    <div class="bw-cup-body bw-cup-body--small">
+                      <div class="bw-cup-liquid" style="background:linear-gradient(180deg,#3C1A05 0%,#1A0800 100%); height:80%;"></div>
+                      <div class="bw-crema"></div>
+                    </div>
+                    <div class="bw-cup-handle bw-cup-handle--small"></div>
+                    <div class="bw-cup-saucer bw-cup-saucer--small"></div>
+                  </div>
+                  <div class="bw-float-badge bw-float-badge--light">
+                    <span class="bw-badge-num" style="color:#C9A96E">★ 4.8</span>
+                    <span class="bw-badge-sub" style="color:rgba(250,245,238,.7)">Đặc sản nhà</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -103,7 +130,17 @@
                 </div>
               </div>
               <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
-                <img src="slidesbanner/istockphoto-1460694670-1024x1024.jpg" alt="Cold Brew" class="bw-slide-image" style="max-width: 100%; height: auto; border-radius: 10px;">
+                <div class="bw-cup-wrap">
+                  <div class="bw-cold-glass">
+                    <div class="bw-cold-liquid"></div>
+                    <div class="bw-cold-ice"></div>
+                    <div class="bw-cold-straw"></div>
+                  </div>
+                  <div class="bw-float-badge">
+                    <span class="bw-badge-num">❄️ Lạnh</span>
+                    <span class="bw-badge-sub">Ủ 24 giờ</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -123,7 +160,16 @@
                 </div>
               </div>
               <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
-                <img src="slidesbanner/istockphoto-1460694670-1024x1024.jpg" alt="Creamy Cappuccino" class="bw-slide-image" style="max-width: 100%; height: auto; border-radius: 10px;">
+                <div class="bw-cup-wrap">
+                  <div class="bw-cup">
+                    <div class="bw-cup-body bw-cup-body--wide">
+                      <div class="bw-cup-liquid" style="background:linear-gradient(180deg,#6B3A1F 0%,#3C1A05 100%); height:55%;"></div>
+                      <div class="bw-cup-foam bw-cup-foam--thick"></div>
+                    </div>
+                    <div class="bw-cup-handle"></div>
+                    <div class="bw-cup-saucer"></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -178,7 +224,7 @@
       <div class="row g-4" id="productGrid">
         <!-- Classic Latte -->
         <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="hot">
-          <div class="bw-card bw-card--featured">
+          <div class="bw-card bw-card--featured" onclick="openProductModal('Classic Latte', 55000, '★★★★★ (1.2k)', 'Espresso + sữa tươi nguyên kem, lớp foam mịn như mây, vị béo ngậy hoàn hảo cho cả ngày.', 'latte')">
             <div class="bw-card-badge">Bán chạy</div>
             <div class="bw-card-img bw-img--latte"><div class="bw-img-emoji">☕</div></div>
             <div class="bw-card-body">
@@ -187,14 +233,14 @@
               <p class="bw-card-desc">Espresso + sữa tươi nguyên kem, lớp foam mịn</p>
               <div class="bw-card-footer">
                 <span class="bw-price">55.000đ</span>
-                <button class="btn bw-btn-add" onclick="addToCart('Classic Latte',55000)"><i class="bi bi-plus"></i> Thêm</button>
+                <button class="btn bw-btn-add" onclick="event.stopPropagation(); addToCartQuick('Classic Latte', 55000)"><i class="bi bi-plus"></i> Thêm</button>
               </div>
             </div>
           </div>
         </div>
         <!-- Espresso -->
         <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="hot">
-          <div class="bw-card">
+          <div class="bw-card" onclick="openProductModal('Espresso', 45000, '★★★★★ (980)', 'Shot espresso đậm đà, hạt Arabica Đà Lạt rang đậm dưới áp suất 9 bar, vị đặc trưng chuẩn Ý.', 'espresso')">
             <div class="bw-card-img bw-img--espresso"><div class="bw-img-emoji">☕</div></div>
             <div class="bw-card-body">
               <div class="bw-card-rating">★★★★★ <span>(980)</span></div>
@@ -202,14 +248,14 @@
               <p class="bw-card-desc">Shot espresso đậm đà, hạt Arabica Đà Lạt rang đậm</p>
               <div class="bw-card-footer">
                 <span class="bw-price">45.000đ</span>
-                <button class="btn bw-btn-add" onclick="addToCart('Espresso',45000)"><i class="bi bi-plus"></i> Thêm</button>
+                <button class="btn bw-btn-add" onclick="event.stopPropagation(); addToCartQuick('Espresso', 45000)"><i class="bi bi-plus"></i> Thêm</button>
               </div>
             </div>
           </div>
         </div>
         <!-- Cappuccino -->
         <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="hot">
-          <div class="bw-card">
+          <div class="bw-card" onclick="openProductModal('Cappuccino', 50000, '★★★★☆ (760)', '1/3 espresso, 1/3 sữa nóng, 1/3 foam dày theo công thức truyền thống, cân bằng tuyệt hảo.', 'cappuccino')">
             <div class="bw-card-img bw-img--cappuccino"><div class="bw-img-emoji">☕</div></div>
             <div class="bw-card-body">
               <div class="bw-card-rating">★★★★☆ <span>(760)</span></div>
@@ -217,14 +263,14 @@
               <p class="bw-card-desc">1/3 espresso, 1/3 sữa nóng, 1/3 foam dày</p>
               <div class="bw-card-footer">
                 <span class="bw-price">50.000đ</span>
-                <button class="btn bw-btn-add" onclick="addToCart('Cappuccino',50000)"><i class="bi bi-plus"></i> Thêm</button>
+                <button class="btn bw-btn-add" onclick="event.stopPropagation(); addToCartQuick('Cappuccino', 50000)"><i class="bi bi-plus"></i> Thêm</button>
               </div>
             </div>
           </div>
         </div>
         <!-- Cold Brew -->
         <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="cold">
-          <div class="bw-card">
+          <div class="bw-card" onclick="openProductModal('Cold Brew', 60000, '★★★★★ (540)', 'Ủ lạnh 24 giờ liên tục, vị ngọt tự nhiên không đắng gắt, sảng khoái và mềm mại.', 'coldbrew')">
             <div class="bw-card-img bw-img--coldbrew"><div class="bw-img-emoji">🧊</div></div>
             <div class="bw-card-body">
               <div class="bw-card-rating">★★★★★ <span>(540)</span></div>
@@ -232,14 +278,14 @@
               <p class="bw-card-desc">Ủ lạnh 24 giờ, vị ngọt tự nhiên không đắng</p>
               <div class="bw-card-footer">
                 <span class="bw-price">60.000đ</span>
-                <button class="btn bw-btn-add" onclick="addToCart('Cold Brew',60000)"><i class="bi bi-plus"></i> Thêm</button>
+                <button class="btn bw-btn-add" onclick="event.stopPropagation(); addToCartQuick('Cold Brew', 60000)"><i class="bi bi-plus"></i> Thêm</button>
               </div>
             </div>
           </div>
         </div>
         <!-- Iced Latte -->
         <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="cold">
-          <div class="bw-card">
+          <div class="bw-card" onclick="openProductModal('Iced Latte', 58000, '★★★★★ (890)', 'Latte đá viên với sữa nguyên kem, sảng khoái và mát lạnh, hoàn hảo cho ngày hè nóng bức.', 'icedlatte')">
             <div class="bw-card-img bw-img--icedlatte"><div class="bw-img-emoji">🥤</div></div>
             <div class="bw-card-body">
               <div class="bw-card-rating">★★★★★ <span>(890)</span></div>
@@ -247,14 +293,14 @@
               <p class="bw-card-desc">Latte đá viên, sảng khoái cho ngày hè nóng bức</p>
               <div class="bw-card-footer">
                 <span class="bw-price">58.000đ</span>
-                <button class="btn bw-btn-add" onclick="addToCart('Iced Latte',58000)"><i class="bi bi-plus"></i> Thêm</button>
+                <button class="btn bw-btn-add" onclick="event.stopPropagation(); addToCartQuick('Iced Latte', 58000)"><i class="bi bi-plus"></i> Thêm</button>
               </div>
             </div>
           </div>
         </div>
         <!-- Matcha -->
         <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="special">
-          <div class="bw-card">
+          <div class="bw-card" onclick="openProductModal('Matcha Latte', 65000, '★★★★☆ (430)', 'Matcha Nhật Bản grade A kết hợp oat milk béo ngậy, vị ngọt nhẹ và nhàng hương thơm.', 'matcha')">
             <div class="bw-card-img bw-img--matcha"><div class="bw-img-emoji">🍵</div></div>
             <div class="bw-card-body">
               <div class="bw-card-rating">★★★★☆ <span>(430)</span></div>
@@ -262,14 +308,14 @@
               <p class="bw-card-desc">Matcha Nhật Bản grade A + oat milk béo ngậy</p>
               <div class="bw-card-footer">
                 <span class="bw-price">65.000đ</span>
-                <button class="btn bw-btn-add" onclick="addToCart('Matcha Latte',65000)"><i class="bi bi-plus"></i> Thêm</button>
+                <button class="btn bw-btn-add" onclick="event.stopPropagation(); addToCartQuick('Matcha Latte', 65000)"><i class="bi bi-plus"></i> Thêm</button>
               </div>
             </div>
           </div>
         </div>
         <!-- Mocha -->
         <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="special">
-          <div class="bw-card">
+          <div class="bw-card" onclick="openProductModal('Caramel Mocha', 62000, '★★★★★ (620)', 'Socola đen kết hợp espresso, caramel drizzle thơm lừng tạo vị đậm đà và ngọt ngất.', 'mocha')">
             <div class="bw-card-img bw-img--mocha"><div class="bw-img-emoji">🍫</div></div>
             <div class="bw-card-body">
               <div class="bw-card-rating">★★★★★ <span>(620)</span></div>
@@ -277,14 +323,14 @@
               <p class="bw-card-desc">Socola đen + espresso + caramel drizzle thơm lừng</p>
               <div class="bw-card-footer">
                 <span class="bw-price">62.000đ</span>
-                <button class="btn bw-btn-add" onclick="addToCart('Caramel Mocha',62000)"><i class="bi bi-plus"></i> Thêm</button>
+                <button class="btn bw-btn-add" onclick="event.stopPropagation(); addToCartQuick('Caramel Mocha', 62000)"><i class="bi bi-plus"></i> Thêm</button>
               </div>
             </div>
           </div>
         </div>
         <!-- Affogato -->
         <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="special">
-          <div class="bw-card">
+          <div class="bw-card" onclick="openProductModal('Affogato', 70000, '★★★★★ (310)', 'Kem vanilla trắng mịn tan chảy dưới shot espresso nóng, tạo vị béo ngon và tương phản thú vị.', 'affogato')">
             <div class="bw-card-img bw-img--affogato"><div class="bw-img-emoji">🍨</div></div>
             <div class="bw-card-body">
               <div class="bw-card-rating">★★★★★ <span>(310)</span></div>
@@ -292,7 +338,7 @@
               <p class="bw-card-desc">Kem vanilla tan chảy dưới shot espresso nóng</p>
               <div class="bw-card-footer">
                 <span class="bw-price">70.000đ</span>
-                <button class="btn bw-btn-add" onclick="addToCart('Affogato',70000)"><i class="bi bi-plus"></i> Thêm</button>
+                <button class="btn bw-btn-add" onclick="event.stopPropagation(); addToCartQuick('Affogato', 70000)"><i class="bi bi-plus"></i> Thêm</button>
               </div>
             </div>
           </div>
@@ -301,14 +347,53 @@
     </div>
   </section>
 
+  <!-- ===================== PRODUCT DETAIL MODAL ===================== -->
+  <div class="bw-modal-overlay" id="productModal" onclick="closeProductModal(event)">
+    <div class="bw-modal-content" onclick="event.stopPropagation()">
+      <button class="bw-modal-close" onclick="closeProductModal()"><i class="bi bi-x-lg"></i></button>
+      
+      <div class="bw-modal-body">
+        <div class="bw-modal-image">
+          <div id="modalProductImage" class="bw-modal-img bw-img--latte">
+            <div class="bw-img-emoji">☕</div>
+          </div>
+        </div>
+        
+        <div class="bw-modal-info">
+          <h2 id="modalProductName" class="bw-modal-title">Classic Latte</h2>
+          <div id="modalProductRating" class="bw-modal-rating">★★★★★ (1.2k)</div>
+          <p id="modalProductDesc" class="bw-modal-desc">Mô tả sản phẩm</p>
+          
+          <div class="bw-modal-price-section">
+            <span class="bw-modal-label">Giá:</span>
+            <span id="modalProductPrice" class="bw-modal-price">55.000đ</span>
+          </div>
+
+          <div class="bw-modal-quantity">
+            <span class="bw-modal-label">Số lượng:</span>
+            <div class="bw-qty-control">
+              <button class="bw-qty-btn" onclick="decreaseQty()"><i class="bi bi-dash"></i></button>
+              <input type="number" id="modalQuantity" class="bw-qty-input" value="1" min="1" max="99">
+              <button class="bw-qty-btn" onclick="increaseQty()"><i class="bi bi-plus"></i></button>
+            </div>
+          </div>
+
+          <button class="btn bw-btn-dark w-100" onclick="addToCartFromModal()">
+            <i class="bi bi-bag-plus me-2"></i>Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Cart Toast -->
   <div class="bw-cart-toast" id="cartToast">
     <i class="bi bi-bag-check-fill me-2"></i><span id="cartMsg">Đã thêm vào giỏ!</span>
   </div>
 
-  <!-- Cart Float Button -->
-  <div class="bw-cart-float" id="cartFloat" onclick="toggleCart()" style="display:none;">
-    <i class="bi bi-bag-fill"></i>
+  <!-- Cart Float Button with Coffee Icon -->
+  <div class="bw-cart-float" id="cartFloat" onclick="toggleCart()" style="display:none;" title="Giỏ hàng">
+    <span class="bw-coffee-icon">☕</span>
     <span class="bw-cart-count" id="cartCount">0</span>
   </div>
 
@@ -343,7 +428,7 @@
         <div class="col-lg-6">
           <p class="bw-section-tag">Câu chuyện của chúng tôi</p>
           <h2 class="bw-section-title" style="color:var(--cream)">Từ hạt rang<br/><em>đến tách latte</em></h2>
-          <p class="bw-about-text">Brewnara ra đời từ niềm đam mê với hạt cà phê Arabica vùng cao Đà Lạt. Mỗi đơn hàng được pha chế thủ công và giao trong vòng[...]
+          <p class="bw-about-text">Brewnara ra đời từ niềm đam mê với hạt cà phê Arabica vùng cao Đà Lạt. Mỗi đơn hàng được pha chế thủ công và giao trong vòng 2 giờ, nóng hổi, tươi mới. Chúng tôi tin rằng, cà phê không chỉ là thức uống mà là một trải nghiệm đầy cảm xúc.</p>
           <a href="#contact" class="btn bw-btn-gold">Liên hệ chúng tôi</a>
         </div>
         <div class="col-lg-6">
@@ -430,6 +515,7 @@
   <script>
     // ========== CART ==========
     let cart = [];
+    let currentModalProduct = {};
 
     function addToCart(name, price) {
       const existing = cart.find(i => i.name === name);
@@ -437,6 +523,10 @@
       else cart.push({ name, price, qty: 1 });
       updateCartUI();
       showToast('Đã thêm "' + name + '" vào giỏ!');
+    }
+
+    function addToCartQuick(name, price) {
+      addToCart(name, price);
     }
 
     function removeFromCart(name) {
@@ -494,6 +584,60 @@
       document.getElementById('cartMsg').textContent = msg;
       t.classList.add('show');
       setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    // ========== PRODUCT MODAL ==========
+    const imageMap = {
+      'latte': 'bw-img--latte',
+      'espresso': 'bw-img--espresso',
+      'cappuccino': 'bw-img--cappuccino',
+      'coldbrew': 'bw-img--coldbrew',
+      'icedlatte': 'bw-img--icedlatte',
+      'matcha': 'bw-img--matcha',
+      'mocha': 'bw-img--mocha',
+      'affogato': 'bw-img--affogato'
+    };
+
+    function openProductModal(name, price, rating, desc, type) {
+      currentModalProduct = { name, price, rating, desc, type };
+      document.getElementById('modalProductName').textContent = name;
+      document.getElementById('modalProductPrice').textContent = price.toLocaleString('vi-VN') + 'đ';
+      document.getElementById('modalProductRating').textContent = rating;
+      document.getElementById('modalProductDesc').textContent = desc;
+      document.getElementById('modalQuantity').value = '1';
+      
+      const imgEl = document.getElementById('modalProductImage');
+      imgEl.className = 'bw-modal-img ' + (imageMap[type] || 'bw-img--latte');
+      
+      document.getElementById('productModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProductModal(event) {
+      if (event && event.target.id !== 'productModal') return;
+      document.getElementById('productModal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    function increaseQty() {
+      const input = document.getElementById('modalQuantity');
+      input.value = Math.min(parseInt(input.value) + 1, 99);
+    }
+
+    function decreaseQty() {
+      const input = document.getElementById('modalQuantity');
+      input.value = Math.max(parseInt(input.value) - 1, 1);
+    }
+
+    function addToCartFromModal() {
+      const qty = parseInt(document.getElementById('modalQuantity').value);
+      const name = currentModalProduct.name;
+      const price = currentModalProduct.price;
+      
+      for (let i = 0; i < qty; i++) {
+        addToCart(name, price);
+      }
+      closeProductModal();
     }
 
     // ========== FILTER TABS ==========
