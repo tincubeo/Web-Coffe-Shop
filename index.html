@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Eslatte - Coffe</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top bw-navbar">
+    <div class="container">
+      <a class="navbar-brand bw-logo" href="#">Eslatte</a>
+      <button class="navbar-toggler bw-toggler" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <i class="bi bi-list"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav mx-auto gap-lg-2">
+          <li class="nav-item"><a class="nav-link bw-link" href="#hero">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link bw-link" href="#menu">Menu</a></li>
+          <li class="nav-item"><a class="nav-link bw-link" href="#about">Về chúng tôi</a></li>
+          <li class="nav-item"><a class="nav-link bw-link" href="#contact">Liên hệ</a></li>
+        </ul>
+        <a href="#order" class="btn bw-btn-gold ms-lg-3">Đặt hàng ngay</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO CAROUSEL (slideshow 5s) ===================== -->
+  <section id="hero">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <!-- SLIDE 1: Latte -->
+        <div class="carousel-item active bw-slide bw-slide--latte">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center gy-4">
+              <div class="col-lg-6 col-12 bw-slide-text">
+                <span class="bw-tag">★ Bán chạy số 1</span>
+                <h1 class="bw-hero-title">Classic<br/><em>Latte</em></h1>
+                <p class="bw-hero-desc">Espresso đậm đà hòa quyện cùng sữa tươi nguyên kem, lớp foam mịn như mây — tách latte hoàn hảo cho buổi sáng.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                  <a href="#order" class="btn bw-btn-dark">Đặt ngay — 55.000đ</a>
+                  <a href="#menu" class="btn bw-btn-outline">Xem menu</a>
+                </div>
+              </div>
+              <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
+                <div class="bw-cup-wrap">
+                  <div class="bw-cup">
+                    <div class="bw-cup-body">
+                      <div class="bw-cup-liquid" style="background:linear-gradient(180deg,#8B4513 0%,#3C1A05 100%);"></div>
+                      <div class="bw-cup-foam"></div>
+                      <div class="bw-latte-art"></div>
+                    </div>
+                    <div class="bw-cup-handle"></div>
+                    <div class="bw-cup-saucer"></div>
+                  </div>
+                  <div class="bw-float-badge">
+                    <span class="bw-badge-num">★ 4.9</span>
+                    <span class="bw-badge-sub">1,200+ đánh giá</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2: Espresso -->
+        <div class="carousel-item bw-slide bw-slide--espresso">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center gy-4">
+              <div class="col-lg-6 col-12 bw-slide-text">
+                <span class="bw-tag bw-tag--gold">Nguyên bản Ý</span>
+                <h1 class="bw-hero-title bw-hero-title--light">Pure<br/><em>Espresso</em></h1>
+                <p class="bw-hero-desc bw-hero-desc--light">Hạt Arabica Đà Lạt rang đậm, ép dưới áp suất 9 bar — một shot espresso chuẩn vị, đậm đà nguyên bản.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                  <a href="#order" class="btn bw-btn-gold">Đặt ngay — 45.000đ</a>
+                  <a href="#menu" class="btn bw-btn-outline-light">Xem menu</a>
+                </div>
+              </div>
+              <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
+                <div class="bw-cup-wrap">
+                  <div class="bw-cup bw-cup--small">
+                    <div class="bw-cup-body bw-cup-body--small">
+                      <div class="bw-cup-liquid" style="background:linear-gradient(180deg,#3C1A05 0%,#1A0800 100%); height:80%;"></div>
+                      <div class="bw-crema"></div>
+                    </div>
+                    <div class="bw-cup-handle bw-cup-handle--small"></div>
+                    <div class="bw-cup-saucer bw-cup-saucer--small"></div>
+                  </div>
+                  <div class="bw-float-badge bw-float-badge--light">
+                    <span class="bw-badge-num" style="color:#C9A96E">★ 4.8</span>
+                    <span class="bw-badge-sub" style="color:rgba(250,245,238,.7)">Đặc sản nhà</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3: Cold Brew -->
+        <div class="carousel-item bw-slide bw-slide--cold">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center gy-4">
+              <div class="col-lg-6 col-12 bw-slide-text">
+                <span class="bw-tag">❄️ Mới hè này</span>
+                <h1 class="bw-hero-title">Cold<br/><em>Brew</em></h1>
+                <p class="bw-hero-desc">Ủ lạnh 24 giờ liên tục, vị ngọt tự nhiên không đắng gắt — uống một lần là nghiền mãi không thôi.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                  <a href="#order" class="btn bw-btn-dark">Đặt ngay — 60.000đ</a>
+                  <a href="#menu" class="btn bw-btn-outline">Xem menu</a>
+                </div>
+              </div>
+              <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
+                <div class="bw-cup-wrap">
+                  <div class="bw-cold-glass">
+                    <div class="bw-cold-liquid"></div>
+                    <div class="bw-cold-ice"></div>
+                    <div class="bw-cold-straw"></div>
+                  </div>
+                  <div class="bw-float-badge">
+                    <span class="bw-badge-num">❄️ Lạnh</span>
+                    <span class="bw-badge-sub">Ủ 24 giờ</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 4: Cappuccino -->
+        <div class="carousel-item bw-slide bw-slide--cappuccino">
+          <div class="container h-100">
+            <div class="row h-100 align-items-center gy-4">
+              <div class="col-lg-6 col-12 bw-slide-text">
+                <span class="bw-tag bw-tag--gold">Cân bằng hoàn hảo</span>
+                <h1 class="bw-hero-title bw-hero-title--light">Creamy<br/><em>Cappuccino</em></h1>
+                <p class="bw-hero-desc bw-hero-desc--light">1/3 espresso, 1/3 sữa nóng, 1/3 foam dày — công thức cappuccino truyền thống chuẩn Ý.</p>
+                <div class="d-flex gap-3 flex-wrap">
+                  <a href="#order" class="btn bw-btn-gold">Đặt ngay — 50.000đ</a>
+                  <a href="#menu" class="btn bw-btn-outline-light">Xem menu</a>
+                </div>
+              </div>
+              <div class="col-lg-6 d-none d-lg-flex justify-content-center align-items-center">
+                <div class="bw-cup-wrap">
+                  <div class="bw-cup">
+                    <div class="bw-cup-body bw-cup-body--wide">
+                      <div class="bw-cup-liquid" style="background:linear-gradient(180deg,#6B3A1F 0%,#3C1A05 100%); height:55%;"></div>
+                      <div class="bw-cup-foam bw-cup-foam--thick"></div>
+                    </div>
+                    <div class="bw-cup-handle"></div>
+                    <div class="bw-cup-saucer"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /carousel-inner -->
+
+      <button class="carousel-control-prev bw-carousel-btn" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <i class="bi bi-chevron-left"></i>
+      </button>
+      <button class="carousel-control-next bw-carousel-btn" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+
+    </div>
+  </section>
+
+  <!-- ===================== MARQUEE ===================== -->
+  <div class="bw-marquee">
+    <div class="bw-marquee-track">
+      <span>Giao hàng toàn quốc</span><span class="bw-dot">·</span>
+      <span>Arabica nguyên chất</span><span class="bw-dot">·</span>
+      <span>Đặt trước 10h — giao trong ngày</span><span class="bw-dot">·</span>
+      <span>Miễn phí ship đơn từ 150k</span><span class="bw-dot">·</span>
+      <span>Giao hàng toàn quốc</span><span class="bw-dot">·</span>
+      <span>Arabica nguyên chất</span><span class="bw-dot">·</span>
+      <span>Đặt trước 10h — giao trong ngày</span><span class="bw-dot">·</span>
+      <span>Miễn phí ship đơn từ 150k</span><span class="bw-dot">·</span>
+    </div>
+  </div>
+
+  <!-- ===================== MENU ===================== -->
+  <section id="menu" class="bw-section">
+    <div class="container">
+      <div class="row mb-4">
+        <div class="col-12">
+          <p class="bw-section-tag">Menu nổi bật</p>
+          <h2 class="bw-section-title">Chọn ly cà phê<br/><em>của bạn</em></h2>
+        </div>
+      </div>
+      <!-- Filter -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="bw-filter-tabs">
+            <button class="bw-filter-btn active" data-filter="all">Tất cả</button>
+            <button class="bw-filter-btn" data-filter="hot">Cà phê nóng</button>
+            <button class="bw-filter-btn" data-filter="cold">Cà phê lạnh</button>
+            <button class="bw-filter-btn" data-filter="special">Đặc biệt</button>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4" id="productGrid">
+        <!-- Classic Latte -->
+        <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="hot">
+          <div class="bw-card bw-card--featured">
+            <div class="bw-card-badge">Bán chạy</div>
+            <div class="bw-card-img bw-img--latte"><div class="bw-img-emoji">☕</div></div>
+            <div class="bw-card-body">
+              <div class="bw-card-rating">★★★★★ <span>(1.2k)</span></div>
+              <h3 class="bw-card-title">Classic Latte</h3>
+              <p class="bw-card-desc">Espresso + sữa tươi nguyên kem, lớp foam mịn</p>
+              <div class="bw-card-footer">
+                <span class="bw-price">55.000đ</span>
+                <button class="btn bw-btn-add" onclick="addToCart('Classic Latte',55000)"><i class="bi bi-plus"></i> Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Espresso -->
+        <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="hot">
+          <div class="bw-card">
+            <div class="bw-card-img bw-img--espresso"><div class="bw-img-emoji">☕</div></div>
+            <div class="bw-card-body">
+              <div class="bw-card-rating">★★★★★ <span>(980)</span></div>
+              <h3 class="bw-card-title">Espresso</h3>
+              <p class="bw-card-desc">Shot espresso đậm đà, hạt Arabica Đà Lạt rang đậm</p>
+              <div class="bw-card-footer">
+                <span class="bw-price">45.000đ</span>
+                <button class="btn bw-btn-add" onclick="addToCart('Espresso',45000)"><i class="bi bi-plus"></i> Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cappuccino -->
+        <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="hot">
+          <div class="bw-card">
+            <div class="bw-card-img bw-img--cappuccino"><div class="bw-img-emoji">☕</div></div>
+            <div class="bw-card-body">
+              <div class="bw-card-rating">★★★★☆ <span>(760)</span></div>
+              <h3 class="bw-card-title">Cappuccino</h3>
+              <p class="bw-card-desc">1/3 espresso, 1/3 sữa nóng, 1/3 foam dày</p>
+              <div class="bw-card-footer">
+                <span class="bw-price">50.000đ</span>
+                <button class="btn bw-btn-add" onclick="addToCart('Cappuccino',50000)"><i class="bi bi-plus"></i> Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cold Brew -->
+        <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="cold">
+          <div class="bw-card">
+            <div class="bw-card-img bw-img--coldbrew"><div class="bw-img-emoji">🧊</div></div>
+            <div class="bw-card-body">
+              <div class="bw-card-rating">★★★★★ <span>(540)</span></div>
+              <h3 class="bw-card-title">Cold Brew</h3>
+              <p class="bw-card-desc">Ủ lạnh 24 giờ, vị ngọt tự nhiên không đắng</p>
+              <div class="bw-card-footer">
+                <span class="bw-price">60.000đ</span>
+                <button class="btn bw-btn-add" onclick="addToCart('Cold Brew',60000)"><i class="bi bi-plus"></i> Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Iced Latte -->
+        <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="cold">
+          <div class="bw-card">
+            <div class="bw-card-img bw-img--icedlatte"><div class="bw-img-emoji">🥤</div></div>
+            <div class="bw-card-body">
+              <div class="bw-card-rating">★★★★★ <span>(890)</span></div>
+              <h3 class="bw-card-title">Iced Latte</h3>
+              <p class="bw-card-desc">Latte đá viên, sảng khoái cho ngày hè nóng bức</p>
+              <div class="bw-card-footer">
+                <span class="bw-price">58.000đ</span>
+                <button class="btn bw-btn-add" onclick="addToCart('Iced Latte',58000)"><i class="bi bi-plus"></i> Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Matcha -->
+        <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="special">
+          <div class="bw-card">
+            <div class="bw-card-img bw-img--matcha"><div class="bw-img-emoji">🍵</div></div>
+            <div class="bw-card-body">
+              <div class="bw-card-rating">★★★★☆ <span>(430)</span></div>
+              <h3 class="bw-card-title">Matcha Latte</h3>
+              <p class="bw-card-desc">Matcha Nhật Bản grade A + oat milk béo ngậy</p>
+              <div class="bw-card-footer">
+                <span class="bw-price">65.000đ</span>
+                <button class="btn bw-btn-add" onclick="addToCart('Matcha Latte',65000)"><i class="bi bi-plus"></i> Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Mocha -->
+        <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="special">
+          <div class="bw-card">
+            <div class="bw-card-img bw-img--mocha"><div class="bw-img-emoji">🍫</div></div>
+            <div class="bw-card-body">
+              <div class="bw-card-rating">★★★★★ <span>(620)</span></div>
+              <h3 class="bw-card-title">Caramel Mocha</h3>
+              <p class="bw-card-desc">Socola đen + espresso + caramel drizzle thơm lừng</p>
+              <div class="bw-card-footer">
+                <span class="bw-price">62.000đ</span>
+                <button class="btn bw-btn-add" onclick="addToCart('Caramel Mocha',62000)"><i class="bi bi-plus"></i> Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Affogato -->
+        <div class="col-lg-3 col-md-6 col-sm-6 product-item" data-category="special">
+          <div class="bw-card">
+            <div class="bw-card-img bw-img--affogato"><div class="bw-img-emoji">🍨</div></div>
+            <div class="bw-card-body">
+              <div class="bw-card-rating">★★★★★ <span>(310)</span></div>
+              <h3 class="bw-card-title">Affogato</h3>
+              <p class="bw-card-desc">Kem vanilla tan chảy dưới shot espresso nóng</p>
+              <div class="bw-card-footer">
+                <span class="bw-price">70.000đ</span>
+                <button class="btn bw-btn-add" onclick="addToCart('Affogato',70000)"><i class="bi bi-plus"></i> Thêm</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Toast -->
+  <div class="bw-cart-toast" id="cartToast">
+    <i class="bi bi-bag-check-fill me-2"></i><span id="cartMsg">Đã thêm vào giỏ!</span>
+  </div>
+
+  <!-- Cart Float Button -->
+  <div class="bw-cart-float" id="cartFloat" onclick="toggleCart()" style="display:none;">
+    <i class="bi bi-bag-fill"></i>
+    <span class="bw-cart-count" id="cartCount">0</span>
+  </div>
+
+  <!-- Cart Overlay -->
+  <div class="bw-cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+
+  <!-- Cart Sidebar -->
+  <div class="bw-cart-sidebar" id="cartSidebar">
+    <div class="bw-cart-header">
+      <h5><i class="bi bi-bag-fill me-2"></i>Giỏ hàng</h5>
+      <button onclick="toggleCart()" class="bw-cart-close"><i class="bi bi-x-lg"></i></button>
+    </div>
+    <div class="bw-cart-items" id="cartItems">
+      <div class="bw-cart-empty"><i class="bi bi-bag"></i><p>Giỏ hàng trống</p></div>
+    </div>
+    <div class="bw-cart-footer" id="cartFooter" style="display:none;">
+      <div class="bw-cart-total">
+        <span>Tổng cộng:</span>
+        <span class="bw-total-amount" id="totalAmount">0đ</span>
+      </div>
+      <a href="#contact" class="btn bw-btn-dark w-100 mt-3" onclick="toggleCart()">
+        <i class="bi bi-telephone me-2"></i>Đặt hàng qua điện thoại
+      </a>
+      <button class="btn bw-btn-outline w-100 mt-2" onclick="clearCart()">Xoá giỏ hàng</button>
+    </div>
+  </div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about" class="bw-about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <p class="bw-section-tag">Câu chuyện của chúng tôi</p>
+          <h2 class="bw-section-title" style="color:var(--cream)">Từ hạt rang<br/><em>đến tách latte</em></h2>
+          <p class="bw-about-text">Brewnara ra đời từ niềm đam mê với hạt cà phê Arabica vùng cao Đà Lạt. Mỗi đơn hàng được pha chế thủ công và giao trong vòng 2 giờ — nóng hổi như bạn đang ngồi tại quán.</p>
+          <a href="#contact" class="btn bw-btn-gold">Liên hệ chúng tôi</a>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6"><div class="bw-stat-card"><span class="bw-stat-num">3+</span><span class="bw-stat-label">Năm hoạt động</span></div></div>
+            <div class="col-6"><div class="bw-stat-card"><span class="bw-stat-num">12k</span><span class="bw-stat-label">Khách hàng</span></div></div>
+            <div class="col-6"><div class="bw-stat-card"><span class="bw-stat-num">98%</span><span class="bw-stat-label">Hài lòng</span></div></div>
+            <div class="col-6"><div class="bw-stat-card"><span class="bw-stat-num">2h</span><span class="bw-stat-label">Giao hàng nhanh</span></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ORDER CTA ===================== -->
+  <section id="order" class="bw-cta">
+    <div class="container text-center">
+      <h2 class="bw-cta-title">Sẵn sàng thưởng thức?</h2>
+      <p class="bw-cta-sub">Đặt hàng ngay — giao trong 2 giờ, nóng hổi tận tay.</p>
+      <div class="d-flex gap-3 justify-content-center flex-wrap">
+        <a href="tel:0909000000" class="btn bw-btn-white">
+          <i class="bi bi-telephone-fill me-2"></i>Gọi: 0909 000 000
+        </a>
+        <a href="https://zalo.me/0909000000" target="_blank" class="btn bw-btn-outline-white">
+          <i class="bi bi-chat-dots me-2"></i>Đặt qua Zalo
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer id="contact" class="bw-footer">
+    <div class="container">
+      <div class="row g-5 pb-5" style="border-bottom:1px solid rgba(255,255,255,.08)">
+        <div class="col-lg-4 col-md-12">
+          <div class="bw-footer-logo">Brewnara</div>
+          <p class="bw-footer-desc">Cà phê thượng hạng, giao tận cửa.<br/>Từ hạt rang đến tách latte — tất cả đều là tâm huyết.</p>
+          <div class="d-flex gap-3 mt-3">
+            <a href="#" class="bw-social"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="bw-social"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="bw-social"><i class="bi bi-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="bw-footer-heading">Menu</h6>
+          <ul class="bw-footer-list">
+            <li><a href="#">Classic Latte</a></li>
+            <li><a href="#">Espresso</a></li>
+            <li><a href="#">Cold Brew</a></li>
+            <li><a href="#">Cappuccino</a></li>
+            <li><a href="#">Matcha Latte</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-6">
+          <h6 class="bw-footer-heading">Dịch vụ</h6>
+          <ul class="bw-footer-list">
+            <li><a href="#">Đặt hàng online</a></li>
+            <li><a href="#">Giao hàng nhanh</a></li>
+            <li><a href="#">Combo tiết kiệm</a></li>
+            <li><a href="#">Quà tặng</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-12">
+          <h6 class="bw-footer-heading">Liên hệ</h6>
+          <ul class="bw-footer-list">
+            <li><i class="bi bi-geo-alt me-2"></i>Ninh Bình, Việt Nam</li>
+            <li><i class="bi bi-telephone me-2"></i>0909 000 000</li>
+            <li><i class="bi bi-envelope me-2"></i>hello@brewnara.vn</li>
+            <li><i class="bi bi-clock me-2"></i>6:00 — 22:00 mỗi ngày</li>
+          </ul>
+        </div>
+      </div>
+      <div class="row pt-4">
+        <div class="col-12 text-center">
+          <p class="bw-footer-copy">© 2026 Brewnara. Mọi quyền được bảo lưu. Thiết kế với ☕ tại Ninh Bình.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    // ========== CART ==========
+    let cart = [];
+
+    function addToCart(name, price) {
+      const existing = cart.find(i => i.name === name);
+      if (existing) existing.qty++;
+      else cart.push({ name, price, qty: 1 });
+      updateCartUI();
+      showToast('Đã thêm "' + name + '" vào giỏ!');
+    }
+
+    function removeFromCart(name) {
+      cart = cart.filter(i => i.name !== name);
+      updateCartUI();
+    }
+
+    function changeQty(name, delta) {
+      const item = cart.find(i => i.name === name);
+      if (!item) return;
+      item.qty += delta;
+      if (item.qty <= 0) removeFromCart(name);
+      else updateCartUI();
+    }
+
+    function clearCart() {
+      cart = [];
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      const count = cart.reduce((s, i) => s + i.qty, 0);
+      const total = cart.reduce((s, i) => s + i.price * i.qty, 0);
+      document.getElementById('cartCount').textContent = count;
+      document.getElementById('cartFloat').style.display = count > 0 ? 'flex' : 'none';
+      document.getElementById('cartFooter').style.display = count > 0 ? 'block' : 'none';
+      document.getElementById('totalAmount').textContent = total.toLocaleString('vi-VN') + 'đ';
+      const el = document.getElementById('cartItems');
+      if (cart.length === 0) {
+        el.innerHTML = '<div class="bw-cart-empty"><i class="bi bi-bag"></i><p>Giỏ hàng trống</p></div>';
+      } else {
+        el.innerHTML = cart.map(i => `
+          <div class="bw-cart-item">
+            <div class="bw-cart-item-info">
+              <span class="bw-cart-item-name">${i.name}</span>
+              <span class="bw-cart-item-price">${(i.price * i.qty).toLocaleString('vi-VN')}đ</span>
+            </div>
+            <div class="bw-cart-item-ctrl">
+              <button onclick="changeQty('${i.name}',-1)"><i class="bi bi-dash"></i></button>
+              <span>${i.qty}</span>
+              <button onclick="changeQty('${i.name}',1)"><i class="bi bi-plus"></i></button>
+              <button onclick="removeFromCart('${i.name}')" class="bw-remove"><i class="bi bi-trash"></i></button>
+            </div>
+          </div>`).join('');
+      }
+    }
+
+    function toggleCart() {
+      document.getElementById('cartSidebar').classList.toggle('open');
+      document.getElementById('cartOverlay').classList.toggle('open');
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('cartToast');
+      document.getElementById('cartMsg').textContent = msg;
+      t.classList.add('show');
+      setTimeout(() => t.classList.remove('show'), 2500);
+    }
+
+    // ========== FILTER TABS ==========
+    document.querySelectorAll('.bw-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.bw-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.product-item').forEach(item => {
+          item.style.display = (filter === 'all' || item.dataset.category === filter) ? '' : 'none';
+        });
+      });
+    });
+
+    // ========== NAVBAR SCROLL ==========
+    window.addEventListener('scroll', () => {
+      document.querySelector('.bw-navbar').classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+</body>
+</html>
