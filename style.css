@@ -160,27 +160,6 @@
   .bw-card-footer { display:flex; align-items:center; justify-content:space-between; }
   .bw-price { font-family:var(--font-display); font-size:1.2rem; font-weight:600; color:var(--brown-mid); }
 
-  /* ===================== PRODUCT MODAL ===================== */
-  .bw-modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:10000; display:none; align-items:center; justify-content:center; padding:20px; }
-  .bw-modal-overlay.active { display:flex; }
-  .bw-modal-content { width:min(900px, 100%); max-height:calc(100vh - 40px); overflow:auto; background:var(--white); border-radius:20px; position:relative; box-shadow:0 24px 60px rgba(44,26,14,.25); }
-  .bw-modal-close { position:absolute; top:14px; right:14px; width:36px; height:36px; border-radius:50%; border:1px solid var(--cream-dark); background:var(--white); color:var(--brown-dark); display:flex; align-items:center; justify-content:center; cursor:pointer; z-index:2; }
-  .bw-modal-close:hover { background:var(--brown-dark); color:var(--cream); border-color:var(--brown-dark); }
-  .bw-modal-body { display:grid; grid-template-columns: 1fr 1fr; gap:24px; padding:24px; }
-  .bw-modal-img { min-height:300px; border-radius:16px; display:flex; align-items:center; justify-content:center; }
-  .bw-modal-title { font-family:var(--font-display); font-size:2rem; margin-bottom:8px; color:var(--brown-dark); }
-  .bw-modal-rating { color:var(--gold); font-size:.88rem; margin-bottom:10px; }
-  .bw-modal-desc { color:var(--text-light); line-height:1.7; margin-bottom:8px; }
-  .bw-modal-price-section, .bw-modal-quantity { display:flex; align-items:center; justify-content:space-between; gap:14px; margin-top:16px; }
-  .bw-modal-label { color:var(--text-mid); font-size:.9rem; font-weight:500; }
-  .bw-modal-price { font-family:var(--font-display); font-size:1.7rem; color:var(--brown-mid); font-weight:600; }
-  .bw-qty-control { display:flex; align-items:center; border:1px solid var(--cream-dark); border-radius:999px; overflow:hidden; }
-  .bw-qty-btn { width:36px; height:36px; border:none; background:var(--cream); color:var(--brown-dark); cursor:pointer; }
-  .bw-qty-btn:hover { background:var(--brown-dark); color:var(--cream); }
-  .bw-qty-input { width:58px; border:none; text-align:center; font-weight:600; color:var(--brown-dark); outline:none; }
-  .bw-qty-input::-webkit-outer-spin-button,
-  .bw-qty-input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-  .bw-qty-input[type=number] { -moz-appearance: textfield; }
 
   .bw-modal-meta { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0 6px; }
   .bw-meta-chip { background:var(--cream-dark); color:var(--brown-mid); border-radius:999px; padding:6px 10px; font-size:.76rem; font-weight:500; }
