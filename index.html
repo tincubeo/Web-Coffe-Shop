@@ -363,6 +363,7 @@
           <h2 id="modalProductName" class="bw-modal-title">Classic Latte</h2>
           <div id="modalProductRating" class="bw-modal-rating">★★★★★ (1.2k)</div>
           <p id="modalProductDesc" class="bw-modal-desc">Mô tả sản phẩm</p>
+          <div class="bw-modal-meta" id="modalProductMeta"></div>
           
           <div class="bw-modal-price-section">
             <span class="bw-modal-label">Giá:</span>
@@ -516,6 +517,16 @@
     // ========== CART ==========
     let cart = [];
     let currentModalProduct = {};
+    const productDetailsMap = {
+      'Classic Latte': ['Size: M (350ml)', 'Bean: Arabica Đà Lạt', 'Độ đậm: Vừa'],
+      'Espresso': ['Size: S (60ml)', 'Bean: Arabica rang đậm', 'Độ đậm: Mạnh'],
+      'Cappuccino': ['Size: M (300ml)', 'Foam: Dày êm', 'Độ đậm: Vừa'],
+      'Cold Brew': ['Size: L (450ml)', 'Ủ lạnh: 24 giờ', 'Độ đậm: Dịu nhẹ'],
+      'Iced Latte': ['Size: L (450ml)', 'Sữa: Nguyên kem', 'Độ đậm: Nhẹ'],
+      'Matcha Latte': ['Size: M (350ml)', 'Matcha: Nhật Bản grade A', 'Sữa: Oat milk'],
+      'Caramel Mocha': ['Size: M (350ml)', 'Sốt: Caramel + Cacao', 'Độ ngọt: Vừa'],
+      'Affogato': ['Size: M (280ml)', 'Kem: Vanilla', 'Ngon nhất: dùng ngay']
+    };
 
     function addToCart(name, price) {
       const existing = cart.find(i => i.name === name);
@@ -577,6 +588,7 @@
     function toggleCart() {
       document.getElementById('cartSidebar').classList.toggle('open');
       document.getElementById('cartOverlay').classList.toggle('open');
+      setBodyScrollLock(document.getElementById('productModal').classList.contains('active'));
     }
 
     function showToast(msg) {
@@ -604,19 +616,21 @@
       document.getElementById('modalProductPrice').textContent = price.toLocaleString('vi-VN') + 'đ';
       document.getElementById('modalProductRating').textContent = rating;
       document.getElementById('modalProductDesc').textContent = desc;
+      const details = productDetailsMap[name] || [];
+      document.getElementById('modalProductMeta').innerHTML = details.map(item => `<span class="bw-meta-chip">${item}</span>`).join('');
       document.getElementById('modalQuantity').value = '1';
       
       const imgEl = document.getElementById('modalProductImage');
       imgEl.className = 'bw-modal-img ' + (imageMap[type] || 'bw-img--latte');
       
       document.getElementById('productModal').classList.add('active');
-      document.body.style.overflow = 'hidden';
+      setBodyScrollLock(true);
     }
 
     function closeProductModal(event) {
       if (event && event.target.id !== 'productModal') return;
       document.getElementById('productModal').classList.remove('active');
-      document.body.style.overflow = 'auto';
+      setBodyScrollLock(false);
     }
 
     function increaseQty() {
@@ -630,7 +644,7 @@
     }
 
     function addToCartFromModal() {
-      const qty = parseInt(document.getElementById('modalQuantity').value);
+      const qty = Math.min(Math.max(parseInt(document.getElementById('modalQuantity').value) || 1, 1), 99);
       const name = currentModalProduct.name;
       const price = currentModalProduct.price;
       
@@ -638,6 +652,11 @@
         addToCart(name, price);
       }
       closeProductModal();
+    }
+
+    function setBodyScrollLock(lockModal) {
+      const cartOpen = document.getElementById('cartSidebar').classList.contains('open');
+      document.body.style.overflow = (lockModal || cartOpen) ? 'hidden' : '';
     }
 
     // ========== FILTER TABS ==========
